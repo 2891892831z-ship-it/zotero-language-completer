@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><title>Mac 安装说明 · 文献语言补全</title><style>body{max-width:780px;margin:40px auto;padding:0 24px;font:16px/1.9 system-ui,sans-serif;color:#263647}h1{font-size:28px}code{background:#edf2f5;padding:3px 6px}li{margin:10px 0}</style>
+<h1>文献语言补全 · Mac 版 1.0.7</h1>
+<p>适用于 macOS 上的 Zotero 10。插件为纯 JavaScript，未包含 Windows 可执行程序或处理器专用二进制；Intel 和 Apple Silicon 使用同一 XPI。与 Windows 1.0.7 功能相同，无需安装 Python、Node.js 或配置 API Key。</p>
+<h2>安装</h2><ol><li>将 <code>文献语言补全-1.0.7-mac.xpi</code> 传到 Mac，保留 .xpi 后缀，不要解压。</li><li>打开 Zotero 主窗口，在屏幕最上方的 macOS 菜单栏进入 <strong>工具（Tools）→ 插件（Plugins / Add-ons）</strong>。</li><li>点击插件管理页右上角齿轮，选择<strong>从文件安装插件（Install Add-on From File）</strong>，选择 XPI 并确认安装。</li><li>使用 <strong>⌘Q</strong> 完全退出 Zotero，再重新打开。关闭窗口的红色按钮通常不会退出整个应用。</li><li>回到文献列表，在屏幕顶部菜单栏打开<strong>工具 → 文献语言补全…</strong>，点击<strong>扫描并预览</strong>。</li></ol>
+<h2>使用</h2><p>自动识别英文 en / 中文 zh-CN；黄色待确认条目排在最前。识别结果可以点击“修改”手动调整。支持勾选待确认条目后批量设为英文或中文，再点击“补全选中项”写入。可用“展开列表”增加列表高度。自动处理新导入条目默认关闭，可自行开启。</p>
+<p>已有语言不覆盖，修改记录和撤销功能保留。补全语言后仍需用当前 CSL 样式验证英文多作者文献能否正确显示 et al.。</p>
+<h2>验证范围</h2><p>已核查运行代码使用 Zotero / Mozilla 跨平台接口，路径通过 PathUtils 生成，不含 Windows 固定路径或外部命令。底层 1.0.7 已在 Windows Zotero 10.0.7 的独立测试库通过 52 项检查。当前没有 Mac 实机，因此尚未验证 macOS 上的菜单、窗口布局和实际运行，不能视为 Mac 实测通过版本。</p>
+<p>本安装包与 Windows 1.0.7 内容完全一致，只为方便区分而改名。相同插件 ID 将覆盖现有版本。版本范围限定 Zotero 10，Zotero 7、8、9 不在本包兼容声明内。</p>
+<p>本地版没有在线更新服务，升级请手动安装新 XPI；不需要点击“检查更新”。如安装后没有菜单，先检查 Zotero 版本是否为 10，并用 ⌘Q 退出后重开。</p></html>

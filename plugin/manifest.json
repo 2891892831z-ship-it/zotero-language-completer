@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+  "name": "文献语言补全",
+  "version": "1.0.7",
+  "description": "本机识别中英文文献，预览后补全空白语言，支持导入自动补全、修改记录和撤销。",
+  "author": "早点睡觉",
+  "applications": { "zotero": { "id": "language-completer@zaodianshuijiao.local", "update_url": "https://example.invalid/zotero-language-completer/updates.json", "strict_min_version": "10.0", "strict_max_version": "10.99.99" } }
+}

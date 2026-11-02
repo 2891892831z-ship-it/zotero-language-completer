@@ -1,0 +1,5 @@
+node_modules/
+__pycache__/
+*.pyc
+tests/last-smoke.json
+.DS_Store

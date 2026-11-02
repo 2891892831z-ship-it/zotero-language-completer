@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+  <title>文献语言补全 1.0.7</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="chrome://language-completer/content/panel.css?v=1.0.7" />
+  <script src="chrome://language-completer/content/panel.js?v=1.0.7" defer="defer"></script>
+</head>
+<body>
+  <header><span class="eyebrow">ZOTERO · 本机处理</span><h1>补全缺失的文献语言</h1>
+  <p>仅填写空白语言。识别依据为标题和摘要，不等同于全文核验；不确定的文献留待确认。</p></header>
+  <div class="toolbar">
+    <select id="scope" aria-label="处理范围"><option value="library">我的文库 · 全部文献</option><option value="selected">主窗口选中的文献</option></select>
+    <button id="scan" class="primary">扫描并预览</button>
+    <button id="cancel" disabled="disabled">停止</button>
+    <span class="spacer"></span><button id="focus-list" aria-pressed="false">展开列表</button><button id="undo">撤销最近一次补全</button>
+  </div>
+  <section class="automatic"><label><input type="checkbox" id="auto" /> 自动补全以后新导入的文献</label>
+    <small>仅处理“我的文库”，保留已有语言；建议先预览现有库，再开启。</small></section>
+  <div id="status" role="status" aria-live="polite">点击“扫描并预览”开始。预览不会修改文献。</div>
+  <progress id="progress" value="0" max="100"></progress>
+  <div class="toolbar compact"><label><input type="checkbox" id="all" disabled="disabled" /> 勾选全部可补全项</label>
+    <select id="filter" aria-label="筛选结果"><option value="all">全部缺失项</option><option value="ready">可补全</option><option value="review">待确认</option></select>
+    <input id="search" type="search" placeholder="搜索标题" aria-label="搜索标题" />
+    <span class="spacer"></span><span id="count">尚未扫描</span>
+  </div>
+  <div class="toolbar compact"><button id="select-review">选中全部待确认</button><button id="clear-review">取消待确认勾选</button><span id="review-selected">已选待确认 0 项</span><button id="batch-en">待确认 → 英文</button><button id="batch-zh">待确认 → 中文</button><small>仅处理勾选的待确认项，跨全部页；不改变已有识别结果。</small></div>
+  <div class="table-wrap"><table><thead><tr><th class="check">选中</th><th>文献标题</th><th class="language">建议语言</th><th class="reason">判定依据</th></tr></thead><tbody id="results"></tbody></table></div>
+  <div class="toolbar compact"><button id="previous" disabled="disabled">上一页</button><span id="page">0 / 0</span><button id="next" disabled="disabled">下一页</button><span class="spacer"></span><small>每页 100 项；“全部”包含其他页。</small></div>
+  <footer><button id="report" disabled="disabled">导出核对清单</button><span class="spacer"></span><span id="chosen">已选 0 项</span><button id="apply" class="primary" disabled="disabled">补全选中项</button></footer>
+  <p class="note">只修改语言字段，不修改作者、标题、附件或 citekey。操作前保存修改记录；撤销会跳过之后已被编辑的条目。补全后请刷新引用，确认 CSL 样式支持中英文区分。</p>
+</body></html>
